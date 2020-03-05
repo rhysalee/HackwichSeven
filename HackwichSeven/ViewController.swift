@@ -10,11 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var displayLabel: UILabel!
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.displayLabel.text = ""
+        
+        self.view.backgroundColor = UIColor.red
+        
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func buttonPressed(_ sender: Any)
+    {
+    
+        let userInputText = textField.text
+        
+        self.displayLabel.text = userInputText
+    
+    }
 
 }
 
